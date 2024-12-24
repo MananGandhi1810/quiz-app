@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:quiz_app/providers/question_provider.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -9,6 +11,15 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
+  void initState() {
+    super.initState();
+    Future.delayed(
+      Duration.zero,
+      () => mounted ? context.read<QuestionProvider>().loadQuestions() : null,
+    );
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -16,7 +27,7 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(16.0),
         child: Center(
           child: ElevatedButton(
             style: ButtonStyle(
@@ -30,14 +41,14 @@ class _HomePageState extends State<HomePage> {
               children: [
                 Text(
                   "Start Quiz",
-                  style: TextStyle(fontSize: 16),
+                  style: TextStyle(fontSize: 28),
                 ),
                 Padding(
                   padding: EdgeInsets.only(left: 8),
                 ),
                 Icon(
                   Icons.arrow_right_alt_rounded,
-                  size: 32,
+                  size: 56,
                 ),
               ],
             ),
