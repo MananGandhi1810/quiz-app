@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:quiz_app/presentation/question_page.dart';
 import 'package:quiz_app/providers/question_provider.dart';
 
 class HomePage extends StatefulWidget {
@@ -35,7 +36,13 @@ class _HomePageState extends State<HomePage> {
               foregroundColor: WidgetStatePropertyAll(Colors.white),
               iconColor: WidgetStatePropertyAll(Colors.white),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => QuestionPage(),
+                ),
+              );
+            },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

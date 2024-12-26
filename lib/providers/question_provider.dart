@@ -10,12 +10,11 @@ class QuestionProvider extends ChangeNotifier {
   List<QuestionModel> get questions => _questions;
 
   void loadQuestions() async {
-    _questions = Questions.questions['questions']
-            ?.map(
-              (e) => QuestionModel.fromJson(e),
-            )
-            .toList() ??
-        [];
+    _questions = Questions.questions
+        .map(
+          (e) => QuestionModel.fromJson(e),
+        )
+        .toList();
     notifyListeners();
   }
 

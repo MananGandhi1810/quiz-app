@@ -3,7 +3,7 @@ enum Difficulty { easy, medium, hard }
 class QuestionModel {
   late String question;
   late Map options;
-  late String answer;
+  late int answer;
   late Difficulty difficulty;
 
   QuestionModel({

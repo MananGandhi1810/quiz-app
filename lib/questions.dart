@@ -1,24 +1,22 @@
 class Questions {
-  static Map<String, List> questions = {
-    "questions": [
-      {
-        "question": "X",
-        "options": {"1": "", "2": "", "3": "", "4": ""},
-        "answer": "1",
-        "difficulty": "easy"
-      },
-      {
-        "question": "Y",
-        "options": {"1": "", "2": "", "3": "", "4": ""},
-        "answer": "1",
-        "difficulty": "medium"
-      },
-      {
-        "question": "Z",
-        "options": {"1": "", "2": "", "3": "", "4": ""},
-        "answer": "1",
-        "difficulty": "hard"
-      }
-    ]
-  };
+  static List questions = [
+    {
+      "question": "IKJHKVJLDHIUDCHNLJHCNIUDLSVN SRHVRHNLIVUHNIUHVR HVRUI HIJ H UKL HIUL RNLKEB ISRHN LVHNEX",
+      "options": {1: "", 2: "", 3: "", 4: ""},
+      "answer": 1,
+      "difficulty": "easy"
+    },
+    {
+      "question": "IKJHKVJLDHIUDCHNLJHCNIUDLSVN SRHVRHNLIVUHNIUHVR HVRUI HIJ H UKL HIUL RNLKEB ISRHN LVHNEY",
+      "options": {1: "", 2: "", 3: "", 4: ""},
+      "answer": 1,
+      "difficulty": "medium"
+    },
+    {
+      "question": "IKJHKVJLDHIUDCHNLJHCNIUDLSVN SRHVRHNLIVUHNIUHVR HVRUI HIJ H UKL HIUL RNLKEB ISRHN LVHNEZ",
+      "options": {1: "", 2: "", 3: "", 4: ""},
+      "answer": 1,
+      "difficulty": "hard"
+    }
+  ];
 }
