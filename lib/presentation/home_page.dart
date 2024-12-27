@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:quiz_app/presentation/question_page.dart';
 import 'package:quiz_app/providers/question_provider.dart';
+import 'package:quiz_app/providers/score_provider.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -37,6 +38,7 @@ class _HomePageState extends State<HomePage> {
               iconColor: WidgetStatePropertyAll(Colors.white),
             ),
             onPressed: () {
+              context.read<ScoreProvider>().resetScore();
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (_) => QuestionPage(),
