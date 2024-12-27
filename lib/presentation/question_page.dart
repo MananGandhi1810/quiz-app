@@ -48,6 +48,15 @@ class _QuestionPageState extends State<QuestionPage> {
                 ElevatedButton(
                   onPressed: () {},
                   child: Text(
+                    _question?.options[0] ?? "",
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(4),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text(
                     _question?.options[1] ?? "",
                   ),
                 ),
@@ -67,15 +76,6 @@ class _QuestionPageState extends State<QuestionPage> {
                   onPressed: () {},
                   child: Text(
                     _question?.options[3] ?? "",
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(4),
-                ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text(
-                    _question?.options[4] ?? "",
                   ),
                 ),
               ],
