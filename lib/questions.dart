@@ -3,22 +3,22 @@ class Questions {
     {
       "question":
           "IKJHKVJLDHIUDCHNLJHCNIUDLSVN SRHVRHNLIVUHNIUHVR HVRUI HIJ H UKL HIUL RNLKEB ISRHN LVHNEX",
-      "options": {0: "A", 1: "B", 2: "C", 3: "D"},
-      "answer": 1,
+      "options": ["A", "B", "C", "D"],
+      "answer": "A",
       "difficulty": "easy"
     },
     {
       "question":
           "IKJHKVJLDHIUDCHNLJHCNIUDLSVN SRHVRHNLIVUHNIUHVR HVRUI HIJ H UKL HIUL RNLKEB ISRHN LVHNEY",
-      "options": {0: "A", 1: "B", 2: "C", 3: "D"},
-      "answer": 1,
+      "options": ["A", "B", "C", "D"],
+      "answer": "B",
       "difficulty": "medium"
     },
     {
       "question":
           "IKJHKVJLDHIUDCHNLJHCNIUDLSVN SRHVRHNLIVUHNIUHVR HVRUI HIJ H UKL HIUL RNLKEB ISRHN LVHNEZ",
-      "options": {0: "A", 1: "B", 2: "C", 3: "D"},
-      "answer": 1,
+      "options": ["A", "B", "C", "D"],
+      "answer": "C",
       "difficulty": "hard"
     }
   ];

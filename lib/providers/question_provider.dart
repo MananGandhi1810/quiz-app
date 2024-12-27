@@ -19,6 +19,6 @@ class QuestionProvider extends ChangeNotifier {
   }
 
   QuestionModel getRandomQuestion() {
-    return _questions[Random().nextInt(_questions.length)];
+    return _questions[Random().nextInt(_questions.length)]..options.shuffle();
   }
 }
