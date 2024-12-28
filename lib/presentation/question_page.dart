@@ -49,6 +49,7 @@ class _QuestionPageState extends State<QuestionPage> {
             ),
           )
         ],
+        leading: Container(),
       ),
       body: _question != null
           ? Padding(
