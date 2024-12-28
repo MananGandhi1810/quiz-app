@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:quiz_app/models/question_model.dart';
+import 'package:quiz_app/presentation/end_page.dart';
 import 'package:quiz_app/providers/question_provider.dart';
 import 'package:quiz_app/providers/score_provider.dart';
 
@@ -111,7 +112,16 @@ class _QuestionPageState extends State<QuestionPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          if (_submittedAnswer == null) {
+                            return;
+                          }
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                              builder: (_) => EndPage(),
+                            ),
+                          );
+                        },
                         child: Text("End"),
                       ),
                       ElevatedButton(
