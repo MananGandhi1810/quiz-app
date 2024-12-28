@@ -27,9 +27,7 @@ class _QuestionPageState extends State<QuestionPage> {
     if (_submittedAnswer != null) {
       return;
     }
-    context
-        .read<ScoreProvider>()
-        .submitAnswer(answer == _question?.answer);
+    context.read<ScoreProvider>().submitAnswer(answer == _question?.answer);
     setState(() {
       _submittedAnswer = answer;
     });
@@ -99,7 +97,7 @@ class _QuestionPageState extends State<QuestionPage> {
                                   ),
                                 ),
                               ),
-                              i == 3
+                              i != 3
                                   ? Padding(
                                       padding: EdgeInsets.all(4),
                                     )
@@ -117,8 +115,46 @@ class _QuestionPageState extends State<QuestionPage> {
                         child: Text("End"),
                       ),
                       ElevatedButton(
-                        onPressed: () {},
-                        child: Text("Next"),
+                        onPressed: () {
+                          if (_submittedAnswer == null) {
+                            return;
+                          }
+                          Navigator.of(context).pushReplacement(
+                            PageRouteBuilder(
+                              pageBuilder:
+                                  (context, animation, secondaryAnimation) =>
+                                      const QuestionPage(),
+                              transitionsBuilder: (context, animation,
+                                  secondaryAnimation, child) {
+                                const begin = Offset(1.0, 0.0);
+                                const end = Offset.zero;
+                                const curve = Curves.ease;
+
+                                final tween = Tween(begin: begin, end: end);
+                                final curvedAnimation = CurvedAnimation(
+                                  parent: animation,
+                                  curve: curve,
+                                );
+
+                                return SlideTransition(
+                                  position: tween.animate(curvedAnimation),
+                                  child: child,
+                                );
+                              },
+                            ),
+                          );
+                        },
+                        style: ButtonStyle(
+                          backgroundColor: WidgetStatePropertyAll(
+                            Colors.lightBlue,
+                          ),
+                        ),
+                        child: Text(
+                          "Next",
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
                       ),
                     ],
                   )
