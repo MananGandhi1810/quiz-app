@@ -24,6 +24,15 @@ class EndPage extends StatelessWidget {
               "${context.watch<ScoreProvider>().correct}/${context.watch<ScoreProvider>().total}",
               style: TextStyle(fontSize: 24),
             ),
+            Padding(
+              padding: EdgeInsets.all(4),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text("Okay!"),
+            )
           ],
         ),
       ),
