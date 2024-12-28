@@ -29,6 +29,7 @@ class EndPage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
+                context.read<ScoreProvider>().resetScore();
                 Navigator.of(context).pop();
               },
               child: Text("Okay!"),
