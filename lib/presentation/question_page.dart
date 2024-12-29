@@ -114,9 +114,6 @@ class _QuestionPageState extends State<QuestionPage> {
                     children: [
                       ElevatedButton(
                         onPressed: () {
-                          if (_submittedAnswer == null) {
-                            return;
-                          }
                           Navigator.of(context).pushReplacement(
                             MaterialPageRoute(
                               builder: (_) => EndPage(),
